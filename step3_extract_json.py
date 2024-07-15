@@ -10,11 +10,11 @@ warnings.filterwarnings("ignore")
 import functools
 print = functools.partial(print, flush=True)
 
-if __name__ == '__main__':
-    BASEPATH = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
-    BASEDIR = os.path.join(BASEPATH, 'data')
-    saving_file_name = 'json_info.csv'
+BASEPATH = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
+BASEDIR = os.path.join(BASEPATH, 'data')
+saving_file_name = 'json_info.csv'
 
+if __name__ == '__main__':
     paths = []
     for root, dirs, files in os.walk(BASEDIR):
         for file_name in files:

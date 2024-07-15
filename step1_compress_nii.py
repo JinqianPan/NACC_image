@@ -22,17 +22,19 @@ print('\n\n', args, '\n\n')
 
 # ------------------------------------------------------------
 MRI_PATH = '/orange/bianjiang/NACC/IMAGE/MRI/'
+MRI_PATH_NEW = '/orange/bianjiang/NACC/IMAGE/MRI_new/MRI/'
+
 MRI_PATH_all = MRI_PATH + 'all/nifti/'
 MRI_PATH_1yr = MRI_PATH + '/within1yr/nifti/'
+SAVING = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
 
-MRI_PATH_NEW = '/orange/bianjiang/NACC/IMAGE/MRI_new/MRI/'
 MRI_PATH_NEW_all = MRI_PATH_NEW + 'all/nifti/'
 MRI_PATH_NEW_1yr = MRI_PATH_NEW + '/within1yr/nifti/'
 
 if args.data == 'old':
-    SAVING_PATH = f'/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/unzip_{args.machine_num}/'
+    SAVING_PATH = SAVING + f'unzip_{args.machine_num}/'
 elif args.data == 'new':
-    SAVING_PATH = f'/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/unzip_new_{args.machine_num}/'
+    SAVING_PATH = SAVING + f'unzip_new_{args.machine_num}/'
 
 # ------------------------------------------------------------
 try:
