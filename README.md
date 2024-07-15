@@ -42,8 +42,37 @@ pip install json
 ## Coding part
 
 >[!IMPORTANT]
-> Please make sure you have enough memory to save the new clean data.
->
-> The final data should be about 650G. If you do not want to change my code, please make sure you have about 1.6T memory.
+> 1. Please make sure you have enough memory to save the new clean data. The final data should be about 650G. If you do not want to change my code, please make sure you have about 1.6T memory.
+> 2. Please change the path in three code files.
 
-### Step 1:
+### Step 1: decompressing the whole zip file and compressing the `*.nii` to `*.nii.gz`
+
+Usage:
+```python
+python step1_compress_nii.py --total_machine 20 --machine_num 1 --data old
+```
+Due to bunch of files, the first step uses several machines (use slurm to run).
+
+* total_machine: how many machine you gonna to use.
+* machine_num: the number of machine in this way (e.g. if total_machine == 20, then machine_num $\in$[1, 20]).
+* data: which version data you used.
+
+### Step 2: rebuild our folder tree
+The example folder tree is shown above. In this step, we rebuild the folder tree.
+
+```python
+python step2_move_data.py
+```
+
+if you do not want to have the dummy data file, please change line45 from `shutil.copytree` to `shutil.movetree`
+
+### Step 3: extract JSON files
+Extracting all of JSON files to a dataframe (csv file).
+```python
+python step3_extract_json.py
+```
+
+>[!NOTE]
+> Please browse line52-58 to delete the intermediate files.
+>
+> OR you can use command line: `rm -rf {filename}` to delete the files
