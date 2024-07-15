@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 import functools
 print = functools.partial(print, flush=True)
 
-BASEPATH = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
+BASEPATH = ''
 BASEDIR = os.path.join(BASEPATH, 'data')
 saving_file_name = 'json_info.csv'
 

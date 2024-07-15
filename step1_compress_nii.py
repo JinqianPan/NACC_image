@@ -21,12 +21,12 @@ args = parser.parse_args()
 print('\n\n', args, '\n\n')
 
 # ------------------------------------------------------------
-MRI_PATH = '/orange/bianjiang/NACC/IMAGE/MRI/'
-MRI_PATH_NEW = '/orange/bianjiang/NACC/IMAGE/MRI_new/MRI/'
+MRI_PATH = ''
+MRI_PATH_NEW = ''
+SAVING = ''
 
 MRI_PATH_all = MRI_PATH + 'all/nifti/'
 MRI_PATH_1yr = MRI_PATH + '/within1yr/nifti/'
-SAVING = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
 
 MRI_PATH_NEW_all = MRI_PATH_NEW + 'all/nifti/'
 MRI_PATH_NEW_1yr = MRI_PATH_NEW + '/within1yr/nifti/'

@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 STRUCTURE_DATA_PATH = '../structure_data/investigator_mri_nacc65.csv'
-base_path = '/orange/bianjiang/NACC/IMAGE/MRI_clean_data_Jinqian_create/'
+base_path = ''
 base_dir = base_path + 'data/'
 
 if __name__ == '__main__':
