@@ -31,6 +31,9 @@ FOLDER
 ### Package
 We are using the package below.
 ```
+conda create -n nacc_img python=3.9
+conda activate nacc_img
+
 pip install gzip
 pip install zipfile
 pip install tqdm
