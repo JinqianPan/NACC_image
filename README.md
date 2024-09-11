@@ -43,7 +43,7 @@ pip install json
 
 >[!IMPORTANT]
 > 1. Please make sure you have enough memory to save the new clean data. The final data should be about 650G. If you do not want to change my code, please make sure you have about 1.6T memory.
-> 2. VERT IMPORTANT!!! Please change the path in three code files.
+> 2. VERY IMPORTANT!!! Please change the path in three code files.
 
 ### Step 1: decompressing the whole zip file and compressing the `*.nii` to `*.nii.gz`
 
