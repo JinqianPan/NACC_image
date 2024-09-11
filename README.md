@@ -50,6 +50,7 @@ pip install json
 Usage:
 ```python
 python step1_compress_nii.py --total_machine 20 --machine_num 1 --data old
+python step1_compress_nii.py --total_machine 20 --machine_num 1 --data new
 ```
 Due to bunch of files, the first step uses several machines (use slurm to run).
 
