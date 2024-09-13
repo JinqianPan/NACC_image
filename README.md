@@ -31,9 +31,6 @@ FOLDER
 ### Package
 We are using the package below.
 ```
-conda create -n nacc_img python=3.9
-conda activate nacc_img
-
 pip install gzip
 pip install zipfile
 pip install tqdm
@@ -46,14 +43,13 @@ pip install json
 
 >[!IMPORTANT]
 > 1. Please make sure you have enough memory to save the new clean data. The final data should be about 650G. If you do not want to change my code, please make sure you have about 1.6T memory.
-> 2. VERY IMPORTANT!!! Please change the path in three code files.
+> 2. Please change the path in three code files.
 
 ### Step 1: decompressing the whole zip file and compressing the `*.nii` to `*.nii.gz`
 
 Usage:
 ```python
 python step1_compress_nii.py --total_machine 20 --machine_num 1 --data old
-python step1_compress_nii.py --total_machine 20 --machine_num 1 --data new
 ```
 Due to bunch of files, the first step uses several machines (use slurm to run).
 
@@ -80,3 +76,10 @@ python step3_extract_json.py
 > Please browse line52-58 to delete the intermediate files.
 >
 > OR you can use command line: `rm -rf {filename}` to delete the files
+
+### Step 4: Get the 2D image
+Extracting 2D MRI data from the 3D MRI data.
+
+```python
+python step4_2D.py
+```
