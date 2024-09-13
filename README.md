@@ -83,3 +83,10 @@ Extracting 2D MRI data from the 3D MRI data.
 ```python
 python step4_2D.py
 ```
+
+## Citation
+If you use MRISeqClassifier in your research, please cite our paper:
+
+```
+Coming Soon
+```
